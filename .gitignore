@@ -1,0 +1,5 @@
+problems/two-circles-barrier/*.log
+problems/two-circles-barrier/lp*.svg
+problems/two-circles-barrier/milp*.svg
+problems/two-circles-barrier/*.npy
+__pycache__/

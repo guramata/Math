@@ -1,0 +1,5 @@
+design: L=305.2151 h*=98.5743 delta=1.4839 top=101.2465 arc=282.7433 H=17.1273
+conservative: h*=98.4 delta=1.6 L=305.6798
+random 2M escapes: 0 []
+dense 3001x3001 sweep escapes: 0 []
+adversarial 500k escapes: 0 []
