@@ -151,9 +151,68 @@ This gives the alternative (worse) barrier `∂Λ + tips = 400 pi / 3 + 200 - 10
 `|s| >= 100 |sin t|` and `s cos t > 0`; their measure is `100 pi - 200 = 114.16`, about
 27 percent of `mu(F)`. Any improvement on `100 pi` has to recycle that double coverage.
 
-## 7. Files
+## 8. Beating 100 pi: cut the poles
+
+The semicircle `S*` is wasteful at its two poles `(-50, ±100)`. There the lines of `F`
+that pass nearby are of only two kinds, nearly horizontal or nearly vertical: the
+condition `cos(μ+e) + sin μ <= 1` that membership in `F` imposes on a line through the
+pole region has no solutions for intermediate directions. So a short cap of the arc at
+each pole can be replaced by short straight segments that catch each kind separately.
+
+**Construction B(ψ).** Fix `ψ` and cut from `S*` the two caps `|φ| > π/2 − ψ`. Add
+
+| piece | definition | catches |
+|---|---|---|
+| `V+` | `x = −50`, `h* <= y <= 100 / cos ψ` | chords with both ends in the top cap (they meet `x = −50` at height in `[100, 100/cos ψ]`), and near-horizontal lines with one end in the top cap and one at `x < −50` |
+| `V−` | mirror image of `V+` | the same for the bottom cap |
+| `H` | `y = 0`, `−50 − δ <= x <= −50 + 100 sin ψ` | near-vertical lines from cap to cap (they cross the axis between their endpoints' abscissae), and near-vertical lines passing just left of `C₁` |
+
+Every line of `F` meets `S*` (section 4). If it meets the retained arc it is caught. Otherwise
+its two intersections with circle 1 lie in the caps or in the left half, and the case table
+above is exhaustive. The thresholds `h*` and `δ` are found by sweeping all `F`-lines that miss
+the retained arc and recording where they cross `x = −50` and `y = 0`; the length is then
+
+```
+L(ψ) = 100(π − 2ψ) + 2(100 / cos ψ − h*) + 100 sin ψ + δ
+```
+
+The optimum is near `ψ = 9°`. With the conservative rounded values `h* = 98.4`, `δ = 1.6`:
+
+| piece | length |
+|---|---|
+| retained arc, `|φ| <= 81°` | 282.743 |
+| `V+` and `V−` | 2 × 2.847 |
+| `H` | 17.237 |
+| **total** | **305.680** |
+
+![Improved barrier](barrier2.svg)
+
+Certification (`barrier_v2.py`): zero escapes over 2 000 000 random lines of `F`, a
+3001 × 3001 deterministic sweep, and 500 000 samples concentrated near the horizontal and
+vertical directions. The unrounded design value is 305.215.
+
+```
+    100 (π − 1)  <  inf length  <=  305.68
+```
+
+**Why not more.** Cutting the arc anywhere other than the poles is not cheap: through an
+interior point of the arc the lines of `F` fill a full range of directions, and the lines
+that meet `S*` only there continue into `D₂`, so the replacement has to span the removed
+cap. Two natural alternatives were tested and both lose:
+
+- one-sided cut (top pole only): `H` shrinks but the arc saving halves; best 310.6 (`barrier_v4.py`);
+- the hybrid "upper-right quarter of circle 1 plus lower-left quarter of circle 2": not a
+  barrier at all, `y = −x + 20` meets both disks and misses it (`barrier_v3.py`).
+
+A set-cover LP over grid segments (`lp_barrier.py`) puts weight ½ on a lens-shaped loop,
+the usual integrality-gap artefact, and gives no better construction.
+
+## 9. Files
 
 - `draw_barrier.py` — regenerates `barrier.svg`, standard library only.
+- `barrier_v2.py` — designs and certifies the improved barrier `B(ψ)` of section 8.
+- `draw_barrier2.py` — regenerates `barrier2.svg`.
+- `barrier_v3.py`, `barrier_v4.py`, `lp_barrier.py`, `milp_barrier.py` — the rejected alternatives of section 8.
 - `verify.py` — pure-Python checks, no third-party packages. It confirms
   `mu(F) = 200(pi-1)`, that `S*` blocks every line of `F` (2 million random lines plus a
   2001 x 2001 deterministic sweep, zero escapes), the exceptional-line measure

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="851" height="699" viewBox="0 0 851 699" font-family="Georgia,serif">
+<rect width="851" height="699" fill="#fbfaf7"/>
+<clipPath id="d1"><circle cx="308.00" cy="303.30" r="235.00"/></clipPath>
+<circle cx="543.00" cy="303.30" r="235.00" fill="#ecebe4" clip-path="url(#d1)"/>
+<circle cx="308.00" cy="303.30" r="235.00" fill="none" stroke="#c3bdb0" stroke-width="1.6" stroke-dasharray="7 5"/>
+<circle cx="543.00" cy="303.30" r="235.00" fill="none" stroke="#c3bdb0" stroke-width="1.6" stroke-dasharray="7 5"/>
+<line x1="825.00" y1="95.36" x2="26.00" y2="53.15" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<line x1="408.64" y1="26.00" x2="26.00" y2="193.08" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<line x1="329.80" y1="26.00" x2="321.46" y2="580.60" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<line x1="330.45" y1="26.00" x2="282.73" y2="580.60" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<line x1="825.00" y1="209.30" x2="26.00" y2="209.30" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<line x1="650.64" y1="580.60" x2="310.62" y2="26.00" stroke="#8fa9c9" stroke-width="1.5" opacity="0.85"/>
+<path d="M 308.00 68.30 A 235.00 235.00 0 0 1 344.76 71.19" fill="none" stroke="#e5b8ad" stroke-width="3" stroke-dasharray="4 5"/>
+<path d="M 308.00 538.30 A 235.00 235.00 0 0 0 344.76 535.41" fill="none" stroke="#e5b8ad" stroke-width="3" stroke-dasharray="4 5"/>
+<path d="M 344.76 71.19 A 235.00 235.00 0 0 1 344.76 535.41" fill="none" stroke="#c2543a" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="308.00" y1="72.06" x2="308.00" y2="65.37" stroke="#c2543a" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="308.00" y1="534.54" x2="308.00" y2="541.23" stroke="#c2543a" stroke-width="5.5" stroke-linecap="round"/>
+<line x1="304.24" y1="303.30" x2="344.76" y2="303.30" stroke="#c2543a" stroke-width="5.5" stroke-linecap="round"/>
+<circle cx="308.00" cy="303.30" r="3.2" fill="#22201d"/>
+<text x="308.00" y="323.30" fill="#22201d" font-size="15" text-anchor="middle" font-style="italic">C₁</text>
+<circle cx="543.00" cy="303.30" r="3.2" fill="#22201d"/>
+<text x="543.00" y="323.30" fill="#22201d" font-size="15" text-anchor="middle" font-style="italic">C₂</text>
+<text x="292.00" y="69.37" fill="#c2543a" font-size="14" font-style="italic">V₊</text>
+<text x="292.00" y="549.23" fill="#c2543a" font-size="14" font-style="italic">V₋</text>
+<text x="356.76" y="308.30" fill="#c2543a" font-size="14" font-style="italic">H</text>
+<text x="26" y="607" fill="#22201d" font-size="17">Improved barrier: the right half of the left circle with caps of 9° cut at both poles, plus three segments.</text>
+<text x="26" y="631" fill="#8a8478" font-size="15">V±: x = −50, 98.4 ≤ |y| ≤ 100/cos ψ = 101.25.   H: y = 0, −50 − 1.6 ≤ x ≤ −50 + 100 sin ψ = -34.36.</text>
+<text x="26" y="655" fill="#8a8478" font-size="15">Total length 305.68, versus 100π = 314.16 for the full semicircle. Thin lines: samples that the cut caps used to catch.</text>
+<line x1="26" y1="675" x2="78" y2="675" stroke="#c2543a" stroke-width="5.5" stroke-linecap="round"/>
+<text x="88" y="680" fill="#8a8478" font-size="14">barrier</text>
+<line x1="166" y1="675" x2="218" y2="675" stroke="#e5b8ad" stroke-width="3" stroke-dasharray="4 5"/>
+<text x="228" y="680" fill="#8a8478" font-size="14">removed caps</text>
+</svg>
