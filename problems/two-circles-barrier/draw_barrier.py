@@ -107,7 +107,7 @@ for th, p in RAYS:
 
 # the barrier: right half of circle 1
 top, bot = px(C1[0], R), px(C1[0], -R)
-w(f'<path d="M {top[0]:.2f} {top[1]:.2f} A {R*SCALE:.2f} {R*SCALE:.2f} 0 0 0 '
+w(f'<path d="M {top[0]:.2f} {top[1]:.2f} A {R*SCALE:.2f} {R*SCALE:.2f} 0 0 1 '
   f'{bot[0]:.2f} {bot[1]:.2f}" fill="none" stroke="{BARRIER}" '
   f'stroke-width="5.5" stroke-linecap="round"/>')
 
